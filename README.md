@@ -19,7 +19,7 @@ Thanks!
 ## Installation
 
 ### Using Java
-Download precompiled [jar file](http://github.com/nanomonkey/target/uberjar/prime-times-table-0.1.0-SNAPSHOT-standalone.jar)
+Download precompiled [jar file](prime-times-table/target/uberjar/prime-times-table-0.1.0-SNAPSHOT-standalone.jar)
 
 ### Using Leinegen
 Download and install [Leinegen](https://leiningen.org/#install), clone this repo, then you can use Leinegen to run the clojure code in a REPL or from the commandline.
