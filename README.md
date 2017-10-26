@@ -30,32 +30,35 @@ Run from the command line using stand alone jar file which you can grab from the
 
     $ java -jar prime-times-table-0.1.0-SNAPSHOT-standalone.jar [args]
 
-Using Leinegen, from the cloned repository
+Using Leinegen, from the cloned repository:
+
     $ lein run
 
 or with option arguments
+
     $ lein run 11
 
 ## Options
 
-A optional integer number can be passed to very the number of primes used in the table. The default number is 10.
+A optional integer number can be passed as an argument to very the number of primes used in the table. The default number is if no argument is given is 10.
 
 ### Examples
 
 No arguments produce the a multiplication table for the first 10 primes
 
->       2   3   5   7  11  13  17  19  23  29
->   2   4   6  10  14  22  26  34  38  46  58
->   3   6   9  15  21  33  39  51  57  69  87
->   5  10  15  25  35  55  65  85  95 115 145
->   7  14  21  35  49  77  91 119 133 161 203
->  11  22  33  55  77 121 143 187 209 253 319
->  13  26  39  65  91 143 169 221 247 299 377
->  17  34  51  85 119 187 221 289 323 391 493
->  19  38  57  95 133 209 247 323 361 437 551
->  23  46  69 115 161 253 299 391 437 529 667
->  29  58  87 145 203 319 377 493 551 667 841
-
+```
+       2   3   5   7  11  13  17  19  23  29
+   2   4   6  10  14  22  26  34  38  46  58
+   3   6   9  15  21  33  39  51  57  69  87
+   5  10  15  25  35  55  65  85  95 115 145
+   7  14  21  35  49  77  91 119 133 161 203
+  11  22  33  55  77 121 143 187 209 253 319
+  13  26  39  65  91 143 169 221 247 299 377
+  17  34  51  85 119 187 221 289 323 391 493
+  19  38  57  95 133 209 247 323 361 437 551
+  23  46  69 115 161 253 299 391 437 529 667
+  29  58  87 145 203 319 377 493 551 667 841
+```
 
 ### Testing
 
@@ -63,7 +66,7 @@ With Leinegen run
     
     lein test
 
-Note: due to the nature of the program, writing to STDOUT, there is included a macro to set the test to write to a temp file and then test the contents of this file. I haven't tested this functionality on all systems which may not have a /tmp/ folder.
+**Note**: Due to the nature of the program, writing to STDOUT, there is included a macro to set some of the test to write to a temp file and then test the contents of this file. I haven't tested this functionality on all systems which may not have a /tmp/ folder.
 
 ### Notes on performance
 
