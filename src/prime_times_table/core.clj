@@ -29,4 +29,7 @@ along the cell width"
 
 (defn -main
   ([] (-main 10))                    ;default value
-  ([n] (print-multiplication-table! (primes n))))
+  ([n] 
+   (if (> n 0) 
+     (print-multiplication-table! (primes n))
+     (println "Please use an argument greater than zero."))))
