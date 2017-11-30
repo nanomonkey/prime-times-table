@@ -5,6 +5,7 @@
   (cons (first s)
         (lazy-seq (sieve (filter #(not= 0 (mod % (first s)))
                                  (rest s))))))
+
 (defn primes [n]
   (take n (sieve (iterate inc 2))))
 
@@ -28,8 +29,10 @@ along the cell width"
       (println (create-row width num (map #(* num %) nums))))))
 
 (defn -main
-  ([] (-main 10))                    ;default value
-  ([n] 
-   (if (> n 0) 
-     (print-multiplication-table! (primes n))
-     (println "Please use an argument greater than zero."))))
+  ([] (-main "10")) ;default value
+  ([arg] 
+   (let [n (read-string arg)]
+     (if (and (integer? n) 
+              (pos? n)) 
+       (print-multiplication-table! (primes n))
+       (println "Please use an integer argument greater than zero.")))))
